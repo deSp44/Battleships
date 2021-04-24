@@ -76,6 +76,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Commands\AsyncRelayCommand.cs" />
+    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Views\MainWindow_View.xaml.cs">
       <DependentUpon>MainWindow_View.xaml</DependentUpon>
       <SubType>Code</SubType>
