@@ -3,9 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Media;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -28,9 +30,18 @@ namespace Battleships
 
             DataContext = new MainWindow_ViewModel();
 
-            var player = new SoundPlayer(Environment.CurrentDirectory + "/music/play.wav".Trim());
+            media.Source = new Uri(Environment.CurrentDirectory + @"/media/load1.gif".Trim());
+
+            var player = new SoundPlayer(Environment.CurrentDirectory + "/media/play.wav".Trim());
             player.Load();
             player.Play();
+
+        }
+
+        private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            media.Position = new TimeSpan(0, 0, 1);
+            media.Play();
         }
     }
 }

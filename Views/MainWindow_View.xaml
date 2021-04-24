@@ -7,46 +7,68 @@
     xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Battleships"
-    Width="400"
-    Height="450"
-    Icon="../Images/anchor_icon.ico"
+    Width="500"
+    Height="550"
+    Background="Black"
+    Icon="../Images/battleship.ico"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
 
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
+
+
+        <MediaElement
+            x:Name="media"
+            MediaEnded="MediaElement_MediaEnded"
+            Stretch="Fill"
+            UnloadedBehavior="Manual" />
+
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label
                 HorizontalAlignment="Center"
+                Background="{x:Null}"
                 Content="BATTLESHIPS"
                 FontFamily="Felix Titling"
                 FontSize="46"
                 FontWeight="Bold"
-                Foreground="#FFB40E0E" />
+                Foreground="#FFB40E0E">
+                <Label.Effect>
+                    <DropShadowEffect BlurRadius="0" ShadowDepth="2" />
+                </Label.Effect>
+            </Label>
             <Button
                 Width="250"
                 Height="40"
                 Margin="10,40,10,10"
                 HorizontalAlignment="Center"
-                Content="Play" />
+                Command="{Binding PlayCommand}"
+                Content="Play"
+                Cursor="Hand" />
             <Button
                 Width="250"
                 Height="40"
                 Margin="10"
                 HorizontalAlignment="Center"
-                Content="Create a server" />
+                Command="{Binding CreateAServerCommand}"
+                Content="Create a server"
+                Cursor="Hand" />
             <Button
                 Width="250"
                 Height="40"
                 Margin="10"
                 HorizontalAlignment="Center"
-                Content="Credits" />
+                Command="{Binding CreditsCommand}"
+                Content="Credits"
+                Cursor="Hand" />
             <Button
                 Width="250"
                 Height="40"
                 Margin="10"
                 HorizontalAlignment="Center"
-                Content="Exit" />
+                Command="{Binding ExitCommand}"
+                Content="Exit"
+                Cursor="Hand" />
         </StackPanel>
 
 
