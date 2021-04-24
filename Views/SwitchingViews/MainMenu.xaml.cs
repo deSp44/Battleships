@@ -1,5 +1,4 @@
-﻿using MahApps.Metro.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Battleships.Views
+namespace Battleships.Views.SwitchingViews
 {
     /// <summary>
-    /// Interaction logic for GameWindow.xaml
+    /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class GameWindow : MetroWindow
+    public partial class MainMenu : UserControl
     {
-        public GameWindow()
+        public MainMenu()
         {
             InitializeComponent();
         }

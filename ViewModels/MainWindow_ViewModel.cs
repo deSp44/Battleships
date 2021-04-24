@@ -10,9 +10,9 @@ using System.Windows.Input;
 
 namespace Battleships
 {
-    internal class MainWindow_ViewModel : ViewModelBase
+    public class MainWindowViewModel : ViewModelBase
     {
-        public MainWindow_ViewModel()
+        public MainWindowViewModel()
         {
             PlayCommand = new RelayCommand(Play);
             CreateAServerCommand = new RelayCommand(CreateAServer);

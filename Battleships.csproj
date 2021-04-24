@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>battleship.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
@@ -71,12 +72,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\CreateAServerViewModel.cs" />
+    <Compile Include="ViewModels\MainMenuViewModel.cs" />
     <Compile Include="ViewModels\MainWindow_ViewModel.cs" />
-    <Page Include="Views\GameWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MainWindow_View.xaml">
+    <Compile Include="Views\SwitchingViews\CreateAServer.xaml.cs">
+      <DependentUpon>CreateAServer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SwitchingViews\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -87,13 +92,18 @@
     <Compile Include="Commands\AsyncRelayCommand.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\GameWindow.xaml.cs">
-      <DependentUpon>GameWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MainWindow_View.xaml.cs">
-      <DependentUpon>MainWindow_View.xaml</DependentUpon>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\SwitchingViews\CreateAServer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SwitchingViews\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -127,12 +137,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\anchor_icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="anchor_icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="battleship.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\battleship.ico" />

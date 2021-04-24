@@ -6,6 +6,8 @@
     xmlns:local="clr-namespace:Battleships"
     xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="clr-namespace:Battleships.ViewModels"
+    xmlns:views="clr-namespace:Battleships.Views.SwitchingViews"
     Title="Battleships"
     Width="500"
     Height="550"
@@ -13,6 +15,16 @@
     Icon="../Images/battleship.ico"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
+
+
+    <Window.Resources>
+        <DataTemplate x:Name="MainMenuTemplate" DataType="{x:Type viewmodels:MainMenuViewModel}">
+            <views:MainMenuView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="CreateAServerTemplate" DataType="{x:Type viewmodels:CreateAServerViewModel}">
+            <views:CreateAServerView DataContext="{Binding}" />
+        </DataTemplate>
+    </Window.Resources>
 
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 

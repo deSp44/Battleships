@@ -28,7 +28,7 @@ namespace Battleships
         {
             InitializeComponent();
 
-            DataContext = new MainWindow_ViewModel();
+            DataContext = new MainWindowViewModel();
 
             media.Source = new Uri(Environment.CurrentDirectory + @"/media/load1.gif".Trim());
 
