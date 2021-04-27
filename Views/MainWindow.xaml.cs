@@ -16,6 +16,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Battleships.Views.SwitchingViews;
+using Battleships.ViewModels;
 
 namespace Battleships
 {
@@ -27,15 +29,14 @@ namespace Battleships
         public MainWindow()
         {
             InitializeComponent();
-
-            DataContext = new MainWindowViewModel();
-
+            PlayMusic();
+        }
+        private void PlayMusic()
+        {
             media.Source = new Uri(Environment.CurrentDirectory + @"/media/load1.gif".Trim());
-
             var player = new SoundPlayer(Environment.CurrentDirectory + "/media/play.wav".Trim());
             player.Load();
             player.Play();
-
         }
 
         private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)

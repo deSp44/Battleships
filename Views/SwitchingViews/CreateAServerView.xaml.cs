@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Battleships.Views.SwitchingViews
 {
     /// <summary>
-    /// Interaction logic for MainMenu.xaml
+    /// Interaction logic for CreateAServerView.xaml
     /// </summary>
-    public partial class MainMenu : UserControl
+    public partial class CreateAServerView : UserControl
     {
-        public MainMenu()
+        public CreateAServerView()
         {
             InitializeComponent();
         }
