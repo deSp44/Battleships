@@ -5,8 +5,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Battleships.Views.SwitchingViews"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    d:DesignHeight="550"
-    d:DesignWidth="500"
+    d:DesignHeight="640"
+    d:DesignWidth="600"
     mc:Ignorable="d">
 
 
@@ -31,28 +31,23 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Label
+        <TextBlock
             Grid.Row="1"
-            Margin="5"
-            Content="Imię:" />
-        <Label
-            Grid.Row="2"
-            Margin="5"
-            Content="Imię:" />
-        <Label
-            Grid.Row="3"
-            Margin="5"
-            Content="Imię:" />
-        <Label
-            Grid.Row="4"
-            Margin="5"
-            Content="Imię:" />
-        <Label
-            Grid.Row="5"
-            Margin="5"
-            Content="Imię:" />
+            Grid.RowSpan="5"
+            Margin="5" />
+
         <Button
             Grid.Row="6"
+            Width="250"
+            Height="40"
+            Margin="10"
+            HorizontalAlignment="Center"
+            Command="{Binding CreateCommand}"
+            Content="Create"
+            Cursor="Hand" />
+        <Button
+            Grid.Row="6"
+            Grid.Column="1"
             Width="250"
             Height="40"
             Margin="10"
@@ -60,6 +55,7 @@
             Command="{Binding BackCommand}"
             Content="Exit"
             Cursor="Hand" />
+
 
     </Grid>
 </UserControl>

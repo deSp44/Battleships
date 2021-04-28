@@ -5,8 +5,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Battleships.Views.SwitchingViews"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    d:DesignHeight="550"
-    d:DesignWidth="500"
+    d:DesignHeight="640"
+    d:DesignWidth="600"
     mc:Ignorable="d">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -25,7 +25,7 @@
             <Button
                 Width="250"
                 Height="40"
-                Margin="10,40,10,10"
+                Margin="10,80,10,10"
                 HorizontalAlignment="Center"
                 Command="{Binding PlayCommand}"
                 Content="Play"
@@ -37,6 +37,14 @@
                 HorizontalAlignment="Center"
                 Command="{Binding CreateAServerCommand}"
                 Content="Create a server"
+                Cursor="Hand" />
+            <Button
+                Width="250"
+                Height="40"
+                Margin="10"
+                HorizontalAlignment="Center"
+                Command="{Binding OptionsCommand}"
+                Content="Options"
                 Cursor="Hand" />
             <Button
                 Width="250"

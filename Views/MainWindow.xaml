@@ -8,8 +8,8 @@
     xmlns:viewmodels="clr-namespace:Battleships.ViewModels"
     xmlns:views="clr-namespace:Battleships.Views.SwitchingViews"
     Title="Battleships"
-    Width="500"
-    Height="550"
+    Width="600"
+    Height="640"
     Background="Black"
     Icon="../Images/battleship.ico"
     WindowStartupLocation="CenterScreen"
@@ -21,7 +21,7 @@
             MediaEnded="MediaElement_MediaEnded"
             Stretch="Fill"
             UnloadedBehavior="Manual" />
-        
+
         <ContentControl Content="{Binding CurrentViewModel}">
             <ContentControl.Resources>
                 <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}">
@@ -30,10 +30,13 @@
                 <DataTemplate DataType="{x:Type viewmodels:CreateAServerViewModel}">
                     <views:CreateAServerView />
                 </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:SettingsViewModel}">
+                    <views:SettingsView />
+                </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>
 
-        
+
 
     </Grid>
 
